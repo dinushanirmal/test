@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/dinushanirmal/blog/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://github.com/dinushanirmal/blog/</loc>
+</url>
+<url>
+<loc>https://github.com/dinushanirmal/blog/theme-settings/</loc>
+<lastmod>2019-07-06T17:34:55+08:00</lastmod>
+<image:image>
+<image:loc>https://github.com/dinushanirmal/blog/media\posts\1/img5.jpg</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+</urlset>

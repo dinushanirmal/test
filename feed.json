@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "My First Website",
+    "description": "",
+    "home_page_url": "https://github.com/dinushanirmal/blog",
+    "feed_url": "https://github.com/dinushanirmal/blog/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Dinusha"
+    },
+    "items": [
+        {
+            "id": "https://github.com/dinushanirmal/blog/theme-settings/",
+            "url": "https://github.com/dinushanirmal/blog/theme-settings/",
+            "title": "Theme Settings",
+            "summary": "Each theme that is released for Publii can potentially have many unique options along with basic settings that should be included with every theme. To reach the theme settings section, click on the Theme option in the left-sidebar. gulp.task('prepare-editor-css', function() { gulp.src(paths.sass + 'editor.scss') .pipe(sass())&hellip;",
+            "content_html": "<p>Each theme that is released for Publii can potentially have many unique options along with basic settings that should be included with every theme. To reach the theme settings section, click on the <strong>Theme</strong> option in the left-sidebar.</p>\n<p><code>gulp.task('prepare-editor-css', function() {</code><br><code> gulp.src(paths.sass + 'editor.scss')</code><br><code> .pipe(sass())</code><br><code> .pipe(gulp.dest(paths['css']));</code><br><br><code> gulp.src(paths.sass + 'editor-options.scss')</code><br><code> .pipe(sass())</code><br><code> .pipe(gulp.dest(paths['css']));</code><br><code>});</code></p>\n<h3 id=\"mcetoc_1df396lft0\">Colors</h3>\n<p>The colors section allows users to define the color scheme for their site without diving into the CSS code. The number of possible areas that can be customized will depend on the theme, but generally you should expect to at least find a <strong>Primary Color</strong> option, which sets the main color for the key elements in the theme. Beyond this, you are likely to find color options for secondary elements, on-hover text link colors, plus heading, text or link colors.</p>\n<p> </p>\n<p> </p>\n<p> </p>",
+            "image": "https://github.com/dinushanirmal/blog/media/posts/1/img5.jpg",
+            "author": {
+                "name": "Dinusha"
+            },
+            "tags": [
+            ],
+            "date_published": "2019-07-06T17:19:13+08:00",
+            "date_modified": "2019-07-06T17:34:55+08:00"
+        }
+    ]
+}
