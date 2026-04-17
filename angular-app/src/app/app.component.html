@@ -1,0 +1,67 @@
+<div class="shell">
+  <header class="header">
+    <div class="brand">
+      <span class="brand-icon">&#127970;</span>
+      <span class="brand-name">Banking Assistant</span>
+    </div>
+    <span class="badge">MCP Demo</span>
+  </header>
+
+  <main class="feed">
+    @if (history().length === 0 && !loading()) {
+      <div class="empty-state">
+        <p class="hint">Try asking:</p>
+        <div class="suggestion" (click)="message = 'What is my balance?'; send()">
+          &ldquo;What is my balance?&rdquo;
+        </div>
+        <div class="suggestion" (click)="message = 'Send 10000 to Amal'; send()">
+          &ldquo;Send 10,000 to Amal&rdquo;
+        </div>
+      </div>
+    }
+
+    @for (entry of history(); track $index) {
+      @if (entry.role === 'user') {
+        <div class="row row-user">
+          <span class="bubble-user">{{ entry.text }}</span>
+        </div>
+      } @else {
+        <div class="row row-agent">
+          @if (entry.response?.uiSchema) {
+            <app-ui-renderer
+              [schema]="entry.response!.uiSchema!"
+              (actionTriggered)="onAction($event)" />
+          } @else if (entry.response?.cancelled) {
+            <div class="bubble-info">Transfer cancelled.</div>
+          } @else if (entry.response?.error) {
+            <div class="bubble-error">{{ entry.response?.errorMessage }}</div>
+          }
+        </div>
+      }
+    }
+
+    @if (loading()) {
+      <div class="row row-agent">
+        <div class="typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    }
+  </main>
+
+  <footer class="composer">
+    <input
+      class="input"
+      [(ngModel)]="message"
+      (keydown)="onKeyDown($event)"
+      [disabled]="loading()"
+      placeholder="Ask about balance or send money…"
+      autocomplete="off" />
+    <button
+      class="send"
+      (click)="send()"
+      [disabled]="loading() || !message.trim()">
+      &#8593;
+    </button>
+  </footer>
+</div>
