@@ -1,0 +1,16 @@
+id: fund-transfer
+name: Fund Transfer
+intentKeywords:
+  - send
+  - transfer
+  - pay
+  - payment
+systemInstructions: |
+  When the user wants to transfer or send money:
+  1. Extract the recipient name and amount from the message.
+  2. If either is missing, ask the user to clarify before calling any tool.
+  3. Call reviewTransfer with customerId "C001", the recipient name, and the amount.
+  4. Stop immediately after reviewTransfer returns. Do NOT call any other tool.
+  5. A confirmation step will be handled separately by the system.
+  CRITICAL: NEVER call executeTransfer — it does not exist in this phase.
+  CRITICAL: Amounts should be passed as a number (e.g. 10000, not "10,000 LKR").

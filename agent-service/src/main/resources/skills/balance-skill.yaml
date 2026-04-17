@@ -1,0 +1,14 @@
+id: balance-inquiry
+name: Balance Inquiry
+intentKeywords:
+  - balance
+  - account
+  - "how much"
+  - funds
+  - money
+systemInstructions: |
+  When the user asks about their balance or account information:
+  - Call the getBalance tool with customerId "C001" (demo default).
+  - Do NOT ask for confirmation before checking the balance.
+  - Stop after getBalance returns. Do not call any other tool.
+  - NEVER invent or modify the data returned by the tool.

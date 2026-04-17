@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: agent-service
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY}
+      chat:
+        options:
+          model: claude-sonnet-4-6
+          max-tokens: 2048
+
+banking:
+  tools:
+    base-url: http://localhost:8081
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.bank.agent: DEBUG
+    org.springframework.ai: INFO
