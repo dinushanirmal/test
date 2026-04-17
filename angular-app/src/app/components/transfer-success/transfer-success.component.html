@@ -1,0 +1,19 @@
+<div class="success-card">
+  <div class="success-icon">&#9989;</div>
+  <div class="title">Transfer Successful</div>
+
+  <div class="detail-list">
+    <div class="detail-row">
+      <span class="label">Reference</span>
+      <span class="value mono">{{ data['referenceId'] }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">To</span>
+      <span class="value bold">{{ data['to'] }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Amount</span>
+      <span class="value green">{{ data['currency'] }} {{ data['amount'] | number: '1.2-2' }}</span>
+    </div>
+  </div>
+</div>

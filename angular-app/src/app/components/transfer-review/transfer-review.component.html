@@ -1,0 +1,37 @@
+<div class="review-card">
+  <div class="card-header">
+    <span>Transfer Review</span>
+    <span class="icon">&#128203;</span>
+  </div>
+
+  <div class="detail-list">
+    <div class="detail-row">
+      <span class="label">To</span>
+      <span class="value bold">{{ data['to'] }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Amount</span>
+      <span class="value highlight">{{ data['currency'] }} {{ data['amount'] | number: '1.2-2' }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Fee</span>
+      <span class="value">{{ data['fee'] === 0 ? 'Free' : data['fee'] }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">From</span>
+      <span class="value">{{ data['fromAccount'] }}</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    @for (action of actions; track action.action) {
+      <button
+        class="btn"
+        [class.btn-confirm]="action.action === 'CONFIRM_TRANSFER'"
+        [class.btn-cancel]="action.action !== 'CONFIRM_TRANSFER'"
+        (click)="actionTriggered.emit(action.action)">
+        {{ action.label }}
+      </button>
+    }
+  </div>
+</div>

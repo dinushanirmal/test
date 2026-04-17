@@ -1,0 +1,11 @@
+<div class="balance-card">
+  <div class="card-header">
+    <span class="account-label">{{ data['account'] }} Account</span>
+    <span class="card-icon">&#128179;</span>
+  </div>
+  <div class="balance-section">
+    <sup class="currency">{{ data['currency'] }}</sup>
+    <span class="amount">{{ data['balance'] | number: '1.2-2' }}</span>
+  </div>
+  <div class="card-footer">Available Balance</div>
+</div>
