@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: retail-bank-server
+
+server:
+  port: 8081
+
+logging:
+  level:
+    com.bank.retail: DEBUG
